@@ -5,6 +5,10 @@ import java.util.ArrayList;
 public class CountryList {
     public ArrayList<Country> countryList = new ArrayList<>();
 
+    //function for getting countries alphabetically
+
+    //function for getting country by name
+
     public CountryList(){
         countryList.add(new Country("China", 1420062022, 9388211, 39));
         countryList.add(new Country("India",1368737513,2973190,28));
