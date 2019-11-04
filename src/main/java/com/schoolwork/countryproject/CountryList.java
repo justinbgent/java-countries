@@ -6,8 +6,31 @@ public class CountryList {
     public ArrayList<Country> countryList = new ArrayList<>();
 
     //function for getting countries alphabetically
+    public ArrayList<Country> findCountries(CountryTester tester)
+    {
+        ArrayList<Country> tempList = new ArrayList<>();
+        for (Country country : countryList)
+        {
+            if(tester.testCountry(country))
+            {
+                tempList.add(country);
+            }
+        }
+        return tempList;
+    }
 
     //function for getting country by name
+    public Country findCountry(CountryTester tester)
+    {
+        for (Country country : countryList)
+        {
+            if(tester.testCountry(country))
+            {
+                return country;
+            }
+        }
+        return null;
+    }
 
     public CountryList(){
         countryList.add(new Country("China", 1420062022, 9388211, 39));
